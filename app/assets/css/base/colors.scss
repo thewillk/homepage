@@ -1,0 +1,16 @@
+@function brand-color($number) {
+  @return hsl(360deg*$number/3, 80%, 45%);
+}
+
+@function font-color-from-background($background-color) {
+  @if(lightness($background-color) < 50% ) {
+    @return white;
+  }
+  @else {
+    @return black;
+  }
+}
+
+$github-color: brand-color(1);
+$linkedin-color: brand-color(2);
+$blog-color: brand-color(3);

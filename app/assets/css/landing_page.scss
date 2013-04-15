@@ -1,0 +1,34 @@
+.landing-page {
+  .github {
+    background: $github-color;
+    color: font-color-from-background($github-color);
+  }
+  .linkedin {
+    background: $linkedin-color;
+    color: font-color-from-background($linkedin-color);
+  }
+  .blog {
+    background: $blog-color;
+    color: font-color-from-background($blog-color);
+  }
+  li a {
+    padding: $gutter 0;
+    text-align: center;
+    display: block;
+    @include box-shadow( inset 0 0 50px rgba(0,0,0,0.3) );
+    &:hover { @include box-shadow( inset 0 0 50px rgba(255,255,255,0.3) ); }
+  }
+  .image {
+    em {
+      padding: 10%;
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+    }
+    img{
+      width: 100%;
+      max-width: 300px;
+      vertical-align: bottom;
+    }
+  }
+}

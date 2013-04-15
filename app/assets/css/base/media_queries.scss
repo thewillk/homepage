@@ -1,0 +1,20 @@
+@mixin breakpoint($type) {
+  @if( $type=='small-tablet') {
+    @media screen and (min-width: 600px) { @content; }
+  }
+  @elseif( $type=='tablet') {
+    @media screen and (min-width: 768px) { @content; }
+  }
+  @elseif( $type=='desktop') {
+    @media screen and (min-width: 1025px) { @content; }
+  }
+  @elseif( $type=='big-desktop') {
+    @media screen and (min-width: 1280px) { @content; }
+  }
+  @elseif( $type=='hd-tv') {
+    @media screen and (min-width: 1920px) { @content; }
+  }
+  @else {
+    @warn "Breakpoint (#{$type}) not defined."
+  }
+}

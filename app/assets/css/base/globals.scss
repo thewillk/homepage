@@ -1,0 +1,15 @@
+$gutter: 20px;
+$big-gutter: 40px;
+
+$page-padding: 30px;
+$mobile-page-padding: 20px;
+
+* {
+  color: inherit;
+  &, &:after, &:before { @include box-sizing(border-box); }
+}
+
+a {
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
